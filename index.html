@@ -5,7 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type='text/javascript' src="https://rawgit.com/moment/moment/2.24.0/min/moment.min.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-database.js"></script>
+
+
     <link rel="stylesheet" href="assets/css/style.css">
+
     <title>Train Schedule</title>
 </head>
 
@@ -21,17 +35,27 @@
         </p>
         <p>
             <label for="train-time">First Arrival Time:</label>
-            <input type="text" name="time" id="train-time">
+            <input type="time" name="time" id="train-time">
         </p>
         <p>
-            <label for="train-time"> Arrival Frequency:</label>
-            <input type="text" name="time" id="train-time">
+            <label for="train-freq"> Arrival Frequency (min):</label>
+            <input type="text" name="time" id="train-freq">
         </p>
         <p>
             <label for="submit"></label>
             <input type="submit" name="submit" id="submit">
         </p>
     </form>
+
+    <table>
+        <tr>
+            <th>Train Name</th>
+            <th>Destination</th>
+            <th>Frequency (min)</th>
+            <th>Next Arrival</th>
+            <th>Time til Arrival</th>
+        </tr>
+    </table>
     <script src="assets/js/script.js"></script>
 </body>
 
