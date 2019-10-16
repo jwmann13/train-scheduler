@@ -23,19 +23,17 @@ $(document).ready(() => {
             <th>Destination</th>
             <th>Frequency (min)</th>
             <th>Next Arrival</th>
-            <th>Time til Arrival</th>
+            <th>Time til Arrival (min)</th>
             </tr>`);
-        // let val = snapshot.val();
 
         snapshot.forEach((childSnapshot) => {
             let val = childSnapshot.val();
-            // console.log(childSnapshot.val());
             table.append(`<tr>
-            <td>${val.name}</td>
-            <td>${val.destination}</td>
-            <td>${val.frequency}</td>
-            <td>${calcNextTrainTime(val.initTime, val.frequency).time}</td>
-            <td>${calcNextTrainTime(val.initTime, val.frequency).timeTil}</td>
+            <td class="name">${val.name}</td>
+            <td class="destination">${val.destination}</td>
+            <td class"frequency">${val.frequency}</td>
+            <td class"nextTrain">${calcNextTrainTime(val.initTime, val.frequency).time}</td>
+            <td class="timeTil">${calcNextTrainTime(val.initTime, val.frequency).timeTil}</td>
             <tr>`);
         })
     })
