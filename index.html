@@ -17,6 +17,11 @@
      https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/7.2.0/firebase-database.js"></script>
 
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -24,39 +29,44 @@
 </head>
 
 <body>
-    <form action="" class="train-submit">
-        <p>
-            <label for="train-name">Train Name:</label>
-            <input type="text" name="name" id="train-name">
-        </p>
-        <p>
-            <label for="train-destination">Destination:</label>
-            <input type="text" name="destination" id="train-destination">
-        </p>
-        <p>
-            <label for="train-time">First Arrival Time:</label>
-            <input type="time" name="time" id="train-time">
-        </p>
-        <p>
-            <label for="train-freq"> Arrival Frequency (min):</label>
-            <input type="text" name="time" id="train-freq">
-        </p>
-        <p>
-            <label for="submit"></label>
-            <input type="submit" name="submit" id="submit">
-        </p>
-    </form>
 
-    <table>
-        <tr>
-            <th>Train Name</th>
-            <th>Destination</th>
-            <th>Frequency (min)</th>
-            <th>Next Arrival</th>
-            <th>Time til Arrival (min)</th>
-        </tr>
-    </table>
-    <script src="assets/config.js"></script>
+    <div class="container">
+        <div class="row">
+            <form action="" class="col s12 train-submit">
+                <div class="input-field col s12">
+                    <label for="train-name">Train Name:</label>
+                    <input type="text" name="name" id="train-name">
+                </div>
+                <div class="input-field col s12">
+                    <label for="train-destination">Destination:</label>
+                    <input type="text" name="destination" id="train-destination">
+                </div>
+                <div class="input-field col s6">
+                    <label for="train-time">First Arrival Time:</label>
+                    <input type="text" class="timepicker" name="time" id="train-time">
+                </div>
+                <div class="input-field col s6">
+                    <label for="train-freq"> Arrival Frequency (min):</label>
+                    <input type="text" name="freq" id="train-freq">
+                </div>
+
+                <button class="btn waves-effect waves-dark" type="submit" id="submit">Submit</button>
+
+            </form>
+        </div>
+
+        <table>
+            <tr>
+                <th class="col s3">Train Name</th>
+                <th class="col s3">Destination</th>
+                <th class="col s1">Frequency (min)</th>
+                <th class="col s3">Next Arrival</th>
+                <th class="col s1">Time til Arrival (min)</th>
+                <th class="col s1"></th>
+            </tr>
+        </table>
+    </div>
+    <script src="assets/js/config.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 

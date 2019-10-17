@@ -1,7 +1,19 @@
-table {
+/* table {
     width: 100%;
 }
 table, tr, td{
     border-collapse: collapse;
     border: 2px solid black;
+} */
+
+.remove{
+    cursor: pointer;
+}
+
+.remove:hover{
+    font-weight: bolder;
+}
+
+tr:hover{
+    background: lightblue;
 }
